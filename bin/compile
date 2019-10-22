@@ -22,7 +22,7 @@ echo `ls -1 /app`
 echo `ls -1 $build_dir`
 
 gem install bundler -v $BUNDLER_VERSION
-cat Gemfile
 bundle install --path $cache_dir
+cat Gemfile.lock
 
 bundle exec $bp_dir/scripts/precompile
